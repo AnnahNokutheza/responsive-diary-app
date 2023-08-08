@@ -1,0 +1,78 @@
+/* styles/main.css */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Header Styles */
+  .app-header {
+    background-color: #34dbb1;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+
+
+  /* Diary Entry Styles */
+  .diary-entry {
+    border: 5px solid #888888;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .entry-date {
+    font-weight: bold;
+    color: #3498db;
+  }
+
+  .entry-content {
+    margin-top: 0.5rem;
+  }
+
+  /* Diary List Styles */
+  .diary-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Entry Form Styles */
+  .entry-form {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #858484;
+    margin-bottom: 1rem;
+  }
+
+  .entry-form textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #818080;
+    padding: 0.5rem;
+    resize: none;
+  }
+
+  .entry-form button {
+    background-color: #f0f324;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    /* Adjust styles for tablets and larger screens */
+    .diary-list {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .diary-entry {
+      width: calc(33.33% - 2rem);
+      margin: 1rem;
+    }
+  }

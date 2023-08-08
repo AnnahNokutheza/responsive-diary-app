@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import styled from 'styled-components'; // Import the styled-components library
+import './styles/main.css';
+import Header from './components/Header';
+import DiaryList from './components/DiaryList';
+import EntryForm from './components/EntryForm';
 
-function App() {
+const Container = styled.div`
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+`;
+
+const App = () => {
+  const [entries, setEntries] = useState([]);
+
+  const handleAddEntry = (content) => {
+    const newEntry = {
+      date: new Date().toLocaleDateString(),
+      content: content,
+    };
+
+    setEntries([newEntry, ...entries]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <EntryForm onAddEntry={handleAddEntry} />
+      <DiaryList entries={entries} />
+    </Container>
   );
-}
+};
 
 export default App;
