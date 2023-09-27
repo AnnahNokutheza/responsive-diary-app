@@ -38,6 +38,8 @@ const LandingPage = () => {
 
   return (
     <LandingPageContainer>
+    <h1>Your Diary</h1>
+      <p>Welcome to your personal diary. Start documenting your thoughts and experiences.</p>
       <StartWritingButton onClick={handleStartWriting}>Start Writing</StartWritingButton>
     </LandingPageContainer>
   );
