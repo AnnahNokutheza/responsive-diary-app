@@ -18,7 +18,7 @@ const LandingPageContainer = styled.div`
 `;
 
 const StartWritingButton = styled.button`
-  background-color: grey;
+  background-color: black;
   color: white;
   padding: 15px 30px;
   font-size: 24px;
