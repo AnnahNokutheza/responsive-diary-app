@@ -14,7 +14,7 @@ const LandingPageContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: black;
 `;
 
 const StartWritingButton = styled.button`
